@@ -9,6 +9,8 @@ import { PostsComponent } from './posts/posts.component';
 import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { DetailsComponent } from './details/details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
