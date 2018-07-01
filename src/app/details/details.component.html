@@ -2,6 +2,13 @@
 
 <ul>
   <li><strong>Username:</strong> {{ user$.username }}</li>
+  <li><strong>Website:</strong>{{ user$.website }}</li>
   <li><strong>Email:</strong> {{ user$.email }}</li>
   <li><strong>Phone:</strong> {{ user$.phone }}</li>
+  <h1>Users posts:</h1>
+  <li *ngFor="let post of posts$">
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
+  </li>
+
 </ul>
